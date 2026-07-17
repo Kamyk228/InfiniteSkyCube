@@ -31,6 +31,8 @@
             font-size: 24px;
             text-decoration: none;
             font-weight: bold;
+            border: none;
+            cursor: pointer;
         }
 
         .button:hover {
@@ -50,18 +52,53 @@
             margin: auto;
         }
 
+
+        /* Okno licencji */
+
+        .license {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+        }
+
+        .license-content {
+            background: #142850;
+            padding: 30px;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 600px;
+            margin: 80px auto;
+        }
+
+        .license-text {
+            text-align: left;
+            max-height: 300px;
+            overflow-y: auto;
+            background: rgba(0,0,0,0.3);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
     </style>
 </head>
 
+
 <body>
+
 
 <div class="container">
 
 <h1>InfiniteSkyCube</h1>
 
-<a class="button" href="downloads/test.zip">
+
+<button class="button" onclick="openLicense()">
 Download Game
-</a>
+</button>
+
 
 
 <div class="section">
@@ -80,7 +117,109 @@ floating platforms in the sky.
 
 </div>
 
+
 </div>
+
+
+
+<!-- Licencja -->
+
+<div id="licenseBox" class="license">
+
+<div class="license-content">
+
+<h2>InfiniteSkyCube License</h2>
+
+
+<div class="license-text">
+
+<p>
+InfiniteSkyCube is created by Kamyk228.
+</p>
+
+<p>
+All rights reserved.
+</p>
+
+<p>
+The game, including code, graphics, music,
+sounds and other content, belongs to the author.
+</p>
+
+<p>
+You may download and play the game.
+You may create videos, reviews and other content
+about the game.
+</p>
+
+<p>
+You may not sell, copy or redistribute the game
+as your own project.
+</p>
+
+<p>
+© 2026 Kamyk228
+</p>
+
+</div>
+
+
+<br>
+
+
+<label>
+
+<input type="checkbox" id="accept">
+
+I accept the End User License Agreement
+
+</label>
+
+
+<br><br>
+
+
+<button class="button" onclick="downloadGame()">
+Continue Download
+</button>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function openLicense() {
+
+    document.getElementById("licenseBox").style.display = "block";
+
+}
+
+
+function downloadGame() {
+
+
+    if(document.getElementById("accept").checked) {
+
+
+        window.location.href = "downloads/test.zip";
+
+
+    } else {
+
+
+        alert("You must accept the license first.");
+
+
+    }
+
+}
+
+</script>
+
 
 </body>
 </html>
