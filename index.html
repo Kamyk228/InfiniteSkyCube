@@ -414,39 +414,27 @@ Continue Download
 
 <script>
 
-
 function openLicense(){
 
-document.getElementById("licenseBox").style.display="block";
+    document.getElementById("licenseBox").style.display="block";
 
 }
-
-
 
 
 function downloadGame(){
 
+    if(document.getElementById("accept").checked){
 
-if(document.getElementById("accept").checked){
+        window.location.href="https://github.com/Kamyk228/InfiniteSkyCube/releases/download/v1.0/InfiniteSkyCube_v1.0.zip";
 
+    }
+    else{
 
-window.location.href="downloads/test.zip";
+        alert("You must accept the End User License Agreement first.");
 
-
-}
-
-else{
-
-
-alert("You must accept the license first.");
-
+    }
 
 }
-
-
-}
-
-
 
 </script>
 
