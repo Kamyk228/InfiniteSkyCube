@@ -2,43 +2,100 @@
 <html>
 <head>
     <title>InfiniteSkyCube</title>
+
     <style>
         body {
-            background: #101820;
-            color: white;
+            margin: 0;
             font-family: Arial, sans-serif;
+            background: linear-gradient(#5ec8ff, #101820);
+            color: white;
             text-align: center;
         }
 
-        h1 {
-            font-size: 60px;
-            margin-top: 100px;
+        .container {
+            padding: 80px 20px;
         }
 
-        p {
-            font-size: 22px;
+        h1 {
+            font-size: 70px;
+            margin-bottom: 10px;
+            text-shadow: 0px 5px 15px black;
+        }
+
+        .subtitle {
+            font-size: 25px;
+            margin-bottom: 40px;
         }
 
         .button {
-            background: #00aaff;
-            color: white;
-            padding: 15px 30px;
+            display: inline-block;
+            background: white;
+            color: #0077cc;
+            padding: 18px 40px;
+            border-radius: 15px;
+            font-size: 24px;
             text-decoration: none;
-            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+
+        .section {
+            margin-top: 80px;
             font-size: 20px;
+        }
+
+        .box {
+            background: rgba(0,0,0,0.3);
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 700px;
+            margin: auto;
         }
     </style>
 </head>
 
+
 <body>
+
+<div class="container">
 
 <h1>InfiniteSkyCube</h1>
 
-<p>Jump. Climb. Reach the sky.</p>
+<p class="subtitle">
+Jump. Climb. Reach the sky.
+</p>
+
+
+<a class="button" href="#">
+Download Game
+</a>
+
+
+<div class="section">
+
+<div class="box">
+
+<h2>About the game</h2>
 
 <p>
-    <a class="button" href="#">Download Game</a>
+InfiniteSkyCube is a precision platform game
+where you control a cube and jump across
+floating platforms in the sky.
 </p>
+
+<p>
+How far can you go?
+</p>
+
+</div>
+
+</div>
+
+</div>
+
 
 </body>
 </html>
